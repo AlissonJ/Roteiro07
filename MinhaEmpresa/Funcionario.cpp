@@ -1,4 +1,14 @@
-#include"Funcionario.h"
+#include<string>
+#include "Funcionario.h"
+using namespace std;
+
+Funcionario::Funcionario(){}
+
+Funcionario::Funcionario(string m,string n,float s){
+    matricula = m;
+    nome = n;
+    salario = s;
+    }
 
 string Funcionario::getMatricula(){
     return matricula;
