@@ -1,15 +1,17 @@
 #ifndef CIRCULO_H_INCLUDED
 #define CIRCULO_H_INCLUDED
-
-class Circulo{
+#include "FiguraGeometrica.h"
+using namespace std;
+class Circulo:public FiguraGeometrica{
     private:
-        float pi = 3.14;
+        float pi;
         float raio;
-        //pi*r² = area
     public:
-        Circulo(float raio);
+        Circulo(float r,string n);
         float getRaio();
         void setRaio(float r);
+        float calcularArea();
+        float getPi();
 };
 
 

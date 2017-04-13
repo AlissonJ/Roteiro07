@@ -11,7 +11,7 @@ class FiguraGeometrica{
         FiguraGeometrica();
         float calcularArea();
         string getNome();
-        void setNome();
+        void setNome(string n);
 
 };
 

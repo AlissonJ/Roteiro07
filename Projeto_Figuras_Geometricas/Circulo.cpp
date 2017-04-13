@@ -2,9 +2,10 @@
 #include "Circulo.h"
 using namespace std;
 
-Circulo::Circulo(float r){
+Circulo::Circulo(float r,string n){
+    pi = 3.14;
     raio = r;
-    FiguraGeometrica::nome = "circulo";
+    FiguraGeometrica::setNome(n);
 }
 
 float Circulo::getRaio(){
@@ -13,4 +14,11 @@ float Circulo::getRaio(){
 
 void Circulo::setRaio(float r){
     raio = r;
+}
+float Circulo::getPi(){
+    return pi;
+}
+float Circulo::calcularArea(){
+    float area = getPi() * (getRaio() * getRaio());
+    return area;
 }

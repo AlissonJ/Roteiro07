@@ -2,10 +2,10 @@
 #include "Triangulo.h"
 using namespace std;
 
-Triangulo::Triangulo(float b,float a){
+Triangulo::Triangulo(float b,float a,string n){
      base = b;
-     altura a;
-     FiguraGeometrica::nome ="triangulo";
+     altura = a;
+     FiguraGeometrica::setNome(n);
 }
 
 float Triangulo::getBase(){
@@ -24,7 +24,7 @@ void Triangulo::setAltura(float a){
     altura = a;
 }
 
-float FiguraGeometrica::calcularArea(){
-    float area = (Triangulo::base * Triangulo::altura) / 2;
+float Triangulo::calcularArea(){
+    float area = (getBase() * getAltura()) / 2;
     return area;
 }

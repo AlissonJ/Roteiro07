@@ -1,9 +1,9 @@
 #include "FiguraGeometrica.h"
 #include "Quadrado.h"
 using namespace std;
-Quadrado::Quadrado(float l){
-    lado = l;
-    FiguraGeometrica::nome = "quadrado";
+Quadrado::Quadrado(float l,string n){
+    setLado(l);
+    FiguraGeometrica::setNome(n);
 }
 
 float Quadrado::getLado(){
@@ -13,7 +13,7 @@ float Quadrado::getLado(){
 void Quadrado::setLado(float l){
     lado = l;
 }
-float FiguraGeometrica::calcularArea(){
-    float area = (Quadrado::lado * Quadrado::lado);
+float Quadrado::calcularArea(){
+    float area = (getLado() * getLado());
     return area;
 }
